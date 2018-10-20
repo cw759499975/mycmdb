@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8a7b142-c3e1-431c-89dc-7936a7b2b199" name="Default Changelist" comment="" />
+    <list default="true" id="a8a7b142-c3e1-431c-89dc-7936a7b2b199" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,15 +74,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sysinfo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sysinfo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myclient/plugins/windows/sysinfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="-1450">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
+                <element signature="e#45#60#0" expanded="true" />
                 <element signature="e#118#690#0" expanded="false" />
                 <marker date="1539703382000" expanded="true" signature="1444:1478" ph="Select * fro... Win32_PhysicalMemory" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,6 +131,7 @@
         <option value="$PROJECT_DIR$/mycmdb/settings.py" />
         <option value="$PROJECT_DIR$/asset/utils.py" />
         <option value="$PROJECT_DIR$/myclient/bin/NedStark.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -155,57 +169,6 @@
             <path>
               <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
               <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="asset" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="myclient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="myclient" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="myclient" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="myclient" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="myclient" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="myclient" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="windows" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycmdb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycmdb" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -421,6 +384,7 @@
         <state relative-caret-position="100">
           <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
+            <element signature="e#45#60#0" expanded="true" />
             <element signature="e#118#690#0" expanded="false" />
             <marker date="1539703382000" expanded="true" signature="1444:1478" ph="Select * fro... Win32_PhysicalMemory" />
           </folding>
@@ -569,12 +533,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myclient/plugins/windows/sysinfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="-1450">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
+            <element signature="e#45#60#0" expanded="true" />
             <element signature="e#118#690#0" expanded="false" />
             <marker date="1539703382000" expanded="true" signature="1444:1478" ph="Select * fro... Win32_PhysicalMemory" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
