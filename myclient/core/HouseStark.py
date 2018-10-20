@@ -8,6 +8,9 @@ import os
 import datetime
 import demjson
 
+requests.adapters.DEFAULT_RETRIES = 5
+s = requests.session()
+s.keep_alive = False
 class ArgvHandler(object):
     def __init__(self,argv_list):
         self.argvs = argv_list
@@ -61,8 +64,8 @@ class ArgvHandler(object):
             url =  self.__attach_token(url) #api 认证
             print('Connecting [%s], it may take a minute' % url)
             if method == "get":
-
                 args = ""
+                requests.adapters.DEFAULT_RETRIES = 50
                 for k,v in data.items():
                     args += "&%s=%s" %(k,v)
                 args = args[1:]
@@ -70,8 +73,9 @@ class ArgvHandler(object):
                 try:
                     # req = urllib2.Request(url_with_args)
                     # req_data = urllib2.urlopen(req,timeout=settings.Params['request_timeout'])
-                    requests.adapters.DEFAULT_RETRIES = 5
-
+                    requests.adapters.DEFAULT_RETRIES = 5000
+                    s = requests.session()
+                    s.config['keep_alive'] = False
                     req = requests.get(url_with_args,timeout=settings.Params['request_timeout'])
                     # req_data = urllib2.urlopen(req,timeout=settings.Params['request_timeout'])
                     callback = req.text
@@ -87,7 +91,9 @@ class ArgvHandler(object):
                     # callback = res_data.read()
                     # callback = json.loads(callback)
                     #data_encode = urllib.urlencode(data)
-                    requests.adapters.DEFAULT_RETRIES = 5
+                    requests.adapters.DEFAULT_RETRIES = 5000
+                    s = requests.session()
+                    s.keep_alive = False
 
                     req = requests.post(url=url,data=data)
                     # res_data = urllib2.urlopen(req,timeout=settings.Params['request_timeout'])
@@ -102,6 +108,8 @@ class ArgvHandler(object):
 
     def load_asset_id(self,sn=None):
         asset_id_file = settings.Params['asset_id']
+        print("123",asset_id_file )
+
         has_asset_id = False
         if os.path.isfile(asset_id_file):
             asset_id = open(asset_id_file).read().strip()
@@ -114,6 +122,7 @@ class ArgvHandler(object):
 
     def __update_asset_id(self,new_asset_id):
         asset_id_file = settings.Params['asset_id']
+        print("123",asset_id_file )
         f = open(asset_id_file,"wb")
         f.write((new_asset_id))
         f.close()
@@ -121,7 +130,6 @@ class ArgvHandler(object):
     def report_asset(self):
         obj = info_collection.InfoCollection()
         asset_data = obj.collect()
-
         asset_id = self.load_asset_id()
         if asset_id:
             asset_data["asset_id"] = asset_id
@@ -131,13 +139,7 @@ class ArgvHandler(object):
             post_url = "asset_report_with_no_id"
 
         data = {"asset_data": json.dumps(asset_data)}
-        # data = {"asset_data": demjson.encode(asset_data)}
-
         response = self.__submit_data(post_url, data, method="post")
-        #if "asset_id" in response:
-         #   self.__update_asset_id(response["asset_id"])
-
-        #self.log_record(response)
 
     def log_record(self,log,action_type=None):
         f = open(settings.Params["log_file"],"ab")

@@ -5,6 +5,8 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 
+admin.site.site_header = "资产管理系统"
+
 
 class UserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required

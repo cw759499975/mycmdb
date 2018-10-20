@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-
+from . import admin_settings
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    #'django.template.context_processors.request',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -115,6 +117,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATETIME_FORMAT = 'Y-m-d H:i:s'
+DATE_FORMAT = 'Y-m-d'
 
 AUTH_USER_MODEL = 'asset.UserProfile'
 

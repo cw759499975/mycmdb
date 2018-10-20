@@ -11,8 +11,6 @@ def asset_with_no_asset_id(request):
     if request.method == 'POST':
         ass_handler = core.Asset(request)
         res = ass_handler.get_asset_id_by_sn()
-
-        # return render(request,'assets/acquire_asset_id_test.html',{'response':res})
         return HttpResponse(json.dumps(res))
 
 
@@ -47,16 +45,9 @@ def new_assets_approval(request):
 def asset_report(request):
     print(request.GET)
     if request.method == 'POST':
-
         ass_handler = core.Asset(request)
         if ass_handler.data_is_valid():
             print("----asset data valid:")
             ass_handler.data_inject()
-            # return HttpResponse(json.dumps(ass_handler.response))
-
         return HttpResponse(json.dumps(ass_handler.response))
-        # return render(request,'assets/asset_report_test.html',{'response':ass_handler.response})
-        # else:
-        # return HttpResponse(json.dumps(ass_handler.response))
-
     return HttpResponse('--test--')
